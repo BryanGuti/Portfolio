@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
+
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -12,9 +13,9 @@
       Teal: hsl(174, 63%, 62%)
   */
 
-  --hue: 79;
+  --hue: 29;
   --sat: 100%;
-  --lig: 40%;
+  --lig: 50%;
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
   --title-color: hsl(var(--hue), 12%, 15%);
@@ -24,11 +25,10 @@
   --body-color: hsl(var(--hue), 100%, 99%);
   --container-color: white;
 
-  
-
-  
   /*========== Font and typography ==========*/
+
   /*.5rem = 8px | 1rem = 16px ...*/
+
   --body-font: 'Poppins', sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -48,6 +48,7 @@
 }
 
 /*=============== BASE ===============*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -58,12 +59,10 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  animation: m 3s infinite; 
+  animation: m 3s infinite;
   color: var(--text-color);
   transition: .3s; /* For animation dark mode */
 }
-
- 
 
 h1, h2, h3 {
   color: var(--title-color);
@@ -100,18 +99,19 @@ img {
 }
 
 /*========== Variables Dark theme ==========*/
+
 body.dark-theme{
   --title-color: hsl(var(--hue), 12%, 95%);
   --text-color: hsl(var(--hue), 100%, 100%);
   --body-color: hsl(var(--hue), 40%, 8%);
   --container-color: hsl(var(--hue), 24%, 12%);
-  
 }
 
-/*========== 
-    Color changes in some parts of 
+/*==========
+    Color changes in some parts of
     the website, in light theme
 ==========*/
+
 .dark-theme .button__gray{
   background-color: var(--container-color);
 }
@@ -123,8 +123,8 @@ body.dark-theme{
   background-color: var(--container-color);
 }
 
-
 /*=============== REUSABLE CSS CLASSES ===============*/
+
 .container {
   max-width: 968px;
   margin-left: 1.5rem;
@@ -137,6 +137,7 @@ body.dark-theme{
 }
 
 /*=============== PROFILE ===============*/
+
 .profile{
   position: relative;
   padding-top: 3.5rem;
@@ -235,6 +236,7 @@ body.dark-theme{
 .profile__buttons-small{
   column-gap: .25rem;
 }
+
 /*=============== BUTTONS ===============*/
 
 .button{
@@ -270,6 +272,7 @@ body.dark-theme{
 .button_gray:hover{
   background-color: var(--text-color-light);
 }
+
 /*=============== FILTERS TABS ===============*/
 
 .filters__content{
@@ -300,6 +303,7 @@ body.dark-theme{
 .filters__button:hover{
   background-color: var(--body-color);
 }
+
 /*=============== PROJECTS ===============*/
 
 .projects__card {
@@ -385,7 +389,7 @@ body.dark-theme{
 .skills__name{
   font-size: var(--normal-font-size);
   font-weight: 500;
-  line-height: 18px; 
+  line-height: 18px;
 }
 
 .skills__level{
@@ -394,6 +398,7 @@ body.dark-theme{
 
 
 /* Hide and show projects & skills */
+
 .filters [data-content]{
   display: none;
 }
@@ -407,6 +412,7 @@ body.dark-theme{
 .filter-tab-active{
   background-color: var(--body-color);
 }
+
 /*=============== FOOTER ===============*/
 
 .footer__copy{
@@ -416,11 +422,13 @@ body.dark-theme{
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
+
 /*=============== SCROLL BAR ===============*/
 
-
 /*=============== BREAKPOINTS ===============*/
+
 /* For small devices */
+
 @media  screen and  (max-width:320px){
   .container{
     margin-left: 1rem;
@@ -437,6 +445,7 @@ body.dark-theme{
 }
 
 /* For medium devices */
+
 @media  screen and  (min-width:576px){
   .projects__content{
     grid-template-columns: 332px;
@@ -461,6 +470,7 @@ body.dark-theme{
   }
   }
 /* For large devices */
+
 @media  screen and  (min-width:992px){
   .container{
     margin-left: auto;
